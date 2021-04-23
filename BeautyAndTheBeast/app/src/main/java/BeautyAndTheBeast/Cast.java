@@ -12,8 +12,8 @@ public class Cast {
   public static Servant chip;
 
   public static void createCast() {
-    belle = new Protagonist("Belle", 90);
-    beast = new Protagonist("Beast");
+    belle = new Protagonist("Belle", 90, "blue dress", false);
+    beast = new Protagonist("Beast", 0, "cloak", false);
     cast.add(belle);
     cast.add(beast);
 
