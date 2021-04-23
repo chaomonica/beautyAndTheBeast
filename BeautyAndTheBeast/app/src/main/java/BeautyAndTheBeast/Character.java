@@ -24,6 +24,8 @@ class Protagonist extends Character {
   public boolean isCursed;
   public boolean isInLove;
 
+  // pass in outfit type and isCursed instead of separate constructors***, move
+  // protagonist into separate file
   // Belle
   public Protagonist(String name, int happiness) {
     super(name);
@@ -53,6 +55,21 @@ class Protagonist extends Character {
 
   public void decreaseHappiness() {
     this.happiness--;
+  }
+
+  public void castCurse() {
+    this.isCursed = true;
+    System.out.printf("%s has been cursed!%n", this.name);
+  }
+
+  public void liftCurse() {
+    this.isCursed = false;
+    System.out.printf("%s curse has been lifted!%n", this.name);
+  }
+
+  public void fallInLove() {
+    this.isInLove = true;
+    System.out.printf("%s has fallen in love%n", this.name);
   }
 }
 

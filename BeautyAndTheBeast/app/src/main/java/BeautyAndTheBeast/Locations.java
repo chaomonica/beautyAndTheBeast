@@ -4,13 +4,18 @@ import java.util.ArrayList;
 
 public class Locations {
     public static ArrayList<Location> locations = new ArrayList<Location>();
+    public static Location forest;
+    public static Location village;
+    public static Location castle;
+    public static Location westWing;
+    public static Location library;
 
     public static void createLocations() {
-        Location forest = new Location("forest");
-        Location village = new Location("village");
-        Location castle = new Location("castle");
-        Location westWing = new Location("west wing");
-        Location library = new Location("library");
+        forest = new Location("forest");
+        village = new Location("village");
+        castle = new Location("castle");
+        westWing = new Location("west wing");
+        library = new Location("library");
 
         locations.add(forest);
         locations.add(village);
