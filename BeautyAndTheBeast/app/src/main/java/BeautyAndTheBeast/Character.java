@@ -1,32 +1,31 @@
 package BeautyAndTheBeast;
 
-public class Characters {
+public class Character {
   public String name;
 
-  public Characters(String name) {
+  public Character(String name) {
     this.name = name;
   }
 
 }
 
-class Servants extends Characters {
+class Servant extends Character {
   public String type;
 
-  public Servants(String name, String type) {
+  public Servant(String name, String type) {
     super(name);
     this.type = type;
   }
 }
 
-
-class Protagonists extends Characters {
+class Protagonist extends Character {
   public String outfit;
   private int happiness;
   public boolean isCursed;
   public boolean isInLove;
 
-  //Belle
-  public Protagonists(String name, int happiness) {
+  // Belle
+  public Protagonist(String name, int happiness) {
     super(name);
     this.outfit = "Blue Dress";
     this.happiness = happiness;
@@ -34,8 +33,8 @@ class Protagonists extends Characters {
     this.isInLove = false;
   }
 
-  //Beast
-  public Protagonists(String name) {
+  // Beast
+  public Protagonist(String name) {
     super(name);
     this.outfit = "Cloak";
     this.happiness = 0;
@@ -47,10 +46,18 @@ class Protagonists extends Characters {
     return happiness;
   }
 
+  public void increaseHappiness() {
+    this.happiness++;
+    System.out.printf("%s's happiness has increased%n", this.name);
+  }
+
+  public void decreaseHappiness() {
+    this.happiness--;
+  }
 }
 
-class Villians extends Characters {
-  public Villians(String name){
-    super(name);    
+class Villian extends Character {
+  public Villian(String name) {
+    super(name);
   }
 }

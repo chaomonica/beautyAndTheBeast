@@ -1,20 +1,26 @@
 package BeautyAndTheBeast;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Cast {
-  public static ArrayList<Characters> cast = new ArrayList<Characters>();
+  public static ArrayList<Character> cast = new ArrayList<Character>();
+  public static Protagonist belle;
+  public static Protagonist beast;
+  public static Servant lumiere;
+  public static Servant cogsworth;
+  public static Servant mrsPotts;
+  public static Servant chip;
 
   public static void createCast() {
-    Protagonists belle = new Protagonists("Belle", 90);
-    Protagonists beast = new Protagonists("Beast");
+    belle = new Protagonist("Belle", 90);
+    beast = new Protagonist("Beast");
     cast.add(belle);
     cast.add(beast);
 
-    Servants lumiere = new Servants("Lumiere", "Candelabra");
-    Servants cogsworth = new Servants("Cogsworth", "Clock");
-    Servants mrsPotts = new Servants("Mrs. Potts", "Tea Pot");
-    Servants chip = new Servants("Chip", "Cup");
+    lumiere = new Servant("Lumiere", "Candelabra");
+    cogsworth = new Servant("Cogsworth", "Clock");
+    mrsPotts = new Servant("Mrs. Potts", "Tea Pot");
+    chip = new Servant("Chip", "Cup");
     cast.add(lumiere);
     cast.add(cogsworth);
     cast.add(mrsPotts);
@@ -26,6 +32,6 @@ public class Cast {
       System.out.println(cast.get(i).name);
     }
     // System.out.println(cast.toString());
-    
+
   }
 }
